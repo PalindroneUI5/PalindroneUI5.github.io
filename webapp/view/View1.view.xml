@@ -1,0 +1,83 @@
+<mvc:View controllerName="testnamespace.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<App id="app">
+		<Page showHeader="true" enableScrolling="false" class="sapUiContentPadding" showNavButton="false">
+			<customHeader>
+				<Bar>
+					<contentMiddle>
+						<Label text="{i18n>screen1BarTitle}" class="bigtext"/>
+					</contentMiddle>
+					<!--<m:contentMiddle>-->
+					<!--	<m:Link class="bigtext" text="{i18n>Starttitle}" press="onGotoV1"></m:Link>-->
+					<!--</m:contentMiddle>-->
+					<contentRight>
+						<Image id="__image0" src="./photo/rocheLogoSmall.jpg"/>
+					</contentRight>
+				</Bar>
+			</customHeader>
+			<content>
+				<Table id="idTable" inset="false" items="{ path: 'screen1TableModel>/data', sorter: { path: 'Molecule' } }">
+					<headerToolbar>
+						<Toolbar id="idInfoToolbar" class="toolbar">
+							<SearchField id="searchField" tooltip="{i18n>screen1SearchField}" search="onSearch" liveChange="onLiveChange" width="auto"/>
+							<Button id="createButton" activeIcon="sap-icon://create" press="onCreatePress" text="Create" type="Accept"/>
+						</Toolbar>
+					</headerToolbar>
+					<columns>
+						<Column>
+							<Text text="Molecule"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
+							<Text text="Theme"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+							<Text text="Committee"/>
+						</Column>
+						<Column hAlign="Right">
+							<Text text="LSPC Date"/>
+						</Column>
+						<Column hAlign="Right">
+							<Text text="LSPC Agenda"/>
+						</Column>
+						<Column hAlign="Right">
+							<Text text="Phase"/>
+						</Column>
+						<Column hAlign="Right">
+							<Text text="DTA"/>
+						</Column>
+						<Column hAlign="Right">
+							<Text text="Approved"/>
+						</Column>
+						<Column hAlign="Right">
+							<Text text="Total"/>
+						</Column>
+						<Column hAlign="Right">
+							<Text text="Status"/>
+						</Column>
+						<Column hAlign="Right">
+							<Text/>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem>
+							<cells>
+								<ObjectIdentifier title="{screen1TableModel>Molecule}"/>
+								<ObjectIdentifier title="{screen1TableModel>Theme}"/>
+								<ObjectIdentifier title="{screen1TableModel>Committee}"/>
+								<ObjectIdentifier title="{screen1TableModel>LSPC Date}"/>
+								<ObjectIdentifier title="{screen1TableModel>LSPC Agenda}"/>
+								<ObjectIdentifier title="{screen1TableModel>Phase}"/>
+								<ObjectIdentifier title="{screen1TableModel>DTA}"/>
+								<ObjectIdentifier title="{screen1TableModel>Approved}"/>
+								<ObjectIdentifier title="{screen1TableModel>Total}"/>
+								<core:Icon src="sap-icon://warning2" class="size1" color="#ffe866"/>
+								<Button icon="sap-icon://navigation-right-arrow" press="onGoPress"/>
+								<!--<ObjectIdentifier title="{screen1TableModel>Status}"/>-->
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</content>
+		</Page>
+	</App>
+</mvc:View>

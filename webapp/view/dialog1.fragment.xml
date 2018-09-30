@@ -1,0 +1,95 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:s="sap.suite.ui.commons" xmlns:mvc="sap.ui.core.mvc">
+	<Dialog title="Create theme">
+		<content>
+			<l:VerticalLayout width="100%">
+				<VBox width="100%" direction="Column" justifyContent="Center" alignItems="Center" class="yearButtons">
+					<l:HorizontalLayout xmlns:sap.ui.layout="sap.ui.layout">
+						<SearchField class="searchField" placeholder="Enter Theme here" showSearchButton="false" liveChange="onDialogInputLiveChange"
+							id="dialogInputId" width="340px" enableSuggestions="true" search="onSearch" suggest="onDialogSuggest"
+							suggestionItems="{ path: 'themasModel>/data', sorter: { path: 'themasModel&gt;ThemeDescription' } }">
+							<suggestionItems>
+								<SuggestionItem description="{path:'themasModel>ThemeDescription'} {path:'themasModel&gt;ThemeShortDescription'}"
+									text="{themasModel>ThemeNo}" key="{themasModel>ThemeNo}"/>
+							</suggestionItems>
+						</SearchField>
+					</l:HorizontalLayout>
+					<l:HorizontalLayout>
+						<Text id="themeDescriptionId" class="textDescr"/>
+						<!--		</items>-->
+						<!--	</FlexBox>-->
+					</l:HorizontalLayout>
+					<l:HorizontalLayout>
+						<Text/>
+					</l:HorizontalLayout>
+					<VBox id="vbMsThemaName" width="100%" direction="Row" justifyContent="Center">
+						<MessageStrip id="msThemaName" text="Type thema name" type="Warning" showIcon="true" class="MessageStrip"/>
+					</VBox>
+					<VBox id="vbMsYearsRange" width="100%" direction="Row" justifyContent="Center">
+						<MessageStrip id="msYearsRange" text="Click start and end year to set the range." type="Warning" showIcon="true" class="MessageStrip"/>
+					</VBox>
+					<l:HorizontalLayout xmlns:sap.ui.layout="sap.ui.layout">
+						<Label/>
+						<VBox width="100%" direction="Row" justifyContent="Center" alignItems="Center" class="yearButtons" alignContent="Center"
+							displayInline="true">
+							<Button id="__yearButton1" press="onYearPress"/>
+							<Button id="__yearButton2" press="onYearPress"/>
+							<Button id="__yearButton3" press="onYearPress"/>
+							<Button id="__yearButton4" press="onYearPress"/>
+							<Button id="__yearButton5" press="onYearPress"/>
+							<Button id="__yearButton6" press="onYearPress"/>
+						</VBox>
+					</l:HorizontalLayout>
+					<l:HorizontalLayout xmlns:sap.ui.layout="sap.ui.layout">
+						<VBox width="100%" direction="Row" justifyContent="Center" alignItems="Center" class="yearButtons">
+							<Button id="__yearButton7" press="onYearPress"/>
+							<Button id="__yearButton8" press="onYearPress"/>
+							<Button id="__yearButton9" press="onYearPress"/>
+							<Button id="__yearButton10" press="onYearPress"/>
+							<Button id="__yearButton11" press="onYearPress"/>
+							<Button id="__yearButton12" press="onYearPress"/>
+						</VBox>
+					</l:HorizontalLayout>
+					<l:HorizontalLayout xmlns:sap.ui.layout="sap.ui.layout">
+						<VBox width="100%" direction="Row" justifyContent="Center" alignItems="Center" class="yearButtons">
+							<Button id="__yearButton13" press="onYearPress"/>
+							<Button id="__yearButton14" press="onYearPress"/>
+							<Button id="__yearButton15" press="onYearPress"/>
+							<Button id="__yearButton16" press="onYearPress"/>
+							<Button id="__yearButton17" press="onYearPress"/>
+							<Button id="__yearButton18" press="onYearPress"/>
+						</VBox>
+					</l:HorizontalLayout>
+					<l:HorizontalLayout xmlns:sap.ui.layout="sap.ui.layout">
+						<VBox width="100%" direction="Row" justifyContent="Center" alignItems="Center" class="yearButtons">
+							<Button id="__yearButton19" press="onYearPress"/>
+							<Button id="__yearButton20" press="onYearPress"/>
+							<Button id="__yearButton21" press="onYearPress"/>
+							<Button id="__yearButton22" press="onYearPress"/>
+							<Button id="__yearButton23" press="onYearPress"/>
+							<Button id="__yearButton24" press="onYearPress"/>
+						</VBox>
+					</l:HorizontalLayout>
+					<l:HorizontalLayout xmlns:sap.ui.layout="sap.ui.layout">
+						<VBox width="100%" direction="Row" justifyContent="Center" alignItems="Center" class="yearButtons">
+							<Button id="__yearButton25" press="onYearPress"/>
+							<Button id="__yearButton26" press="onYearPress"/>
+							<Button id="__yearButton27" press="onYearPress"/>
+							<Button id="__yearButton28" press="onYearPress"/>
+							<Button id="__yearButton29" press="onYearPress"/>
+							<Button id="__yearButton30" press="onYearPress"/>
+						</VBox>
+					</l:HorizontalLayout>
+					<Text/><Text/><Text/><Text/>
+					<Button id="__createButton" width="260%" text="Create" press="onDialogPressCreate" class="dialogCreateButton" enabled="false"/>
+				</VBox>
+			</l:VerticalLayout>
+		</content>
+		<!--<beginButton>-->
+		<!--	<Button text="Create" press="onDialogPressCreate"/>-->
+		<!--</beginButton>-->
+		<!--<endButton>-->
+		<!--	<Button text="Cancel" press="onCloseDialog"/>-->
+		<!--</endButton>-->
+	</Dialog>
+</core:FragmentDefinition>

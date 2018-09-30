@@ -1,0 +1,68 @@
+/* Enter your custom styles here */
+
+.marginTop {
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.wtHolder {
+    height: 500px !important;
+}
+
+.summary {
+    margin-top: 260px;
+    height: 0px !important;
+}
+
+.iconTabBar {
+    margin-top: -80px;
+}
+
+.wtHider1 {
+    height: 100px !important;
+    margin-bottom: 40px !important;
+    max-height: 150px;
+    margin-top: 200px;
+    overflow: hidden;
+}
+
+.buttons {
+    /*position: relative*/
+    margin: 0;
+    padding: 0;
+    margin-left: 100px;
+}
+
+.mainTab1 {}
+
+.toolbar {
+    margin-left: -15px;
+}
+
+.searchField {
+    margin-top: 20px;
+}
+
+.textDescr {
+    margin-left: -90px;
+    margin-right: 90px;
+}
+
+.MessageStrip {
+    width: 340px;
+    margin-bottom: 2px;
+}
+
+.SummaryMessageStrip {
+    width: 1250px;
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+.thema {
+    padding-left: 10px;
+}
+
+.dialogCreateButton {
+    margin-left: -30px;
+}

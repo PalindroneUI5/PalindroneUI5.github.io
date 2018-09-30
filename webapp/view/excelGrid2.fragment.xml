@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	xmlns:s="sap.suite.ui.commons" xmlns:mvc="sap.ui.core.mvc" xmlns:cc="testnamespace.customControls">
+	<l:VerticalLayout xmlns:sap.ui.layout="sap.ui.layout" width="100%" id="__layout_excelTable3">
+		<!--<l:HorizontalLayout xmlns:sap.ui.layout="sap.ui.layout" id="__layout_Buttons2">-->
+		<!--	<VBox width="100%" direction="Row" justifyContent="Center" alignItems="Center" class="buttons">-->
+		<!--		<Button text="{i18n>AddWorkPackage}" id="__button01" icon="sap-icon://create" press="onGotoV2d"></Button>-->
+		<!--		<Button text="{i18n>AddYear}" id="__button11" icon="sap-icon://create" press="onGotoV2d"></Button>-->
+		<!--	</VBox>-->
+		<!--</l:HorizontalLayout>-->
+		<VBox width="100%" direction="Column" justifyContent="Center" alignItems="Center" class="mainTab1">
+			<cc:excelGrid3 id="ccExcel2id"></cc:excelGrid3>
+		</VBox>
+	</l:VerticalLayout>
+</core:FragmentDefinition>

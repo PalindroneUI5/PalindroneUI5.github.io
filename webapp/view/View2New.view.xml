@@ -1,0 +1,174 @@
+<mvc:View controllerName="testnamespace.controller.View2New" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:cc="testnamespace.customControls">
+	<App id="app">
+		<Page showHeader="true" enableScrolling="true">
+			<customHeader>
+				<Bar>
+					<contentLeft>
+						<!--<Button text="Change header table" id="__button7" press="onHeaderChange"></Button>-->
+					</contentLeft>
+					<contentMiddle>
+						<Label text="{i18n>screen1BarTitle}" class="bigtext"/>
+					</contentMiddle>
+					<!--<m:contentMiddle>-->
+					<!--	<m:Link class="bigtext" text="{i18n>Starttitle}" press="onGotoV1"></m:Link>-->
+					<!--</m:contentMiddle>-->
+					<contentRight>
+						<Image id="__image0" src="./photo/rocheLogoSmall.jpg"/>
+					</contentRight>
+				</Bar>
+			</customHeader>
+			<content>
+				<!--<Panel expandable="true" expanded="true" headerText="Theme detail" width="auto" class="sapUiResponsiveMargin">-->
+				<!--	<content>-->
+				<!--	</content>-->
+				<!--</Panel>-->
+				<l:VerticalLayout width="100%" id="__layout_excelTable">
+					<VBox width="100%" direction="Column" id="__vbox0" justifyContent="Center" alignItems="Center" class="summary">
+						<MessageStrip id="msSummary" text="Summary" type="Information" showIcon="false" class="SummaryMessageStrip"/>
+						<cc:excelGrid></cc:excelGrid>
+					</VBox>
+				</l:VerticalLayout>
+				<!--	<l:HorizontalLayout xmlns:sap.ui.layout="sap.ui.layout" id="__excel">-->
+				<!--	<VBox width="100%" direction="Row" id="__vbox232" justifyContent="Center" alignItems="Center" class="excelGrid">-->
+				<!--		<core:Fragment fragmentName="testnamespace.view.excelGrid1" type="XML"/>-->
+				<!--	</VBox>-->
+				<!--</l:HorizontalLayout>-->
+				<IconTabBar id="noteDetailIconBar" upperCase="false" expandable="false" class="iconTabBar">
+					<items>
+						<IconTabFilter id="ifThemaDetails" design="Vertical" text="Thema details">
+							<content>
+								<Table id="idHeaderTable1" inset="false" items="{ path: 'screen2Summary>/header1'}">
+									<columns>
+										<Column mergeDuplicates="true" minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+											<Text text="Theme"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+											<Text text="Molecule"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+											<Text text="Indication"/>
+										</Column>
+										<Column hAlign="Center">
+											<Text text="DTA"/>
+										</Column>
+										<Column hAlign="Center">
+											<Text text="Date of request"/>
+										</Column>
+										<Column hAlign="Center">
+											<Text text="Phase"/>
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem>
+											<cells>
+												<ObjectIdentifier id="themaNameid" title=""/>
+												<ObjectIdentifier title="{screen2Summary>Molecule}"/>
+												<ObjectIdentifier title="{screen2Summary>Indication}"/>
+												<ObjectIdentifier title="{screen2Summary>DTA}"/>
+												<ObjectIdentifier id="dateOfReqId" title=""/>
+												<ObjectIdentifier title="{screen2Summary>Phase}"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+								<Table id="idHeaderTable2" inset="false" items="{ path: 'screen2Summary>/header2'}">
+									<columns>
+										<Column mergeDuplicates="true" minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+											<Text text="Type of approval"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+											<Text text="LSPC agenda ID"/>
+										</Column>
+										<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+											<Text text="Stage of request"/>
+										</Column>
+										<Column hAlign="Center">
+											<Text text="Approved"/>
+										</Column>
+										<Column hAlign="Center">
+											<Text text="Incremental"/>
+										</Column>
+										<Column hAlign="Center">
+											<Text text="Name of approver"/>
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem>
+											<cells>
+												<ComboBox items="{ path: 'screen2Summary>/aprovalType'}">
+													<core:Item key="{screen2Summary>Type}" text="{screen2Summary>Type}"/>
+												</ComboBox>
+												<Input value="{screen2Summary>LSPC agenda ID}"/>
+												<Input value="{screen2Summary>Stage of request}"/>
+												<ObjectIdentifier> selected="true"</ObjectIdentifier>
+												<ObjectIdentifier>selected="false"</ObjectIdentifier>
+												<ObjectIdentifier title="{screen2Summary>Name of approver}"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+								<l:VerticalLayout width="100%">
+									<!--<VBox width="100%" direction="Column" justifyContent="Center" alignItems="Center" class="summary">-->
+									<Text></Text>
+									<!--</VBox>-->
+								</l:VerticalLayout>
+								<!--<MessageStrip type="None" showIcon="false" text="Comment"/>-->
+								<Text text="Comment:"/>
+								<TextArea value="" growing="true" width="100%"/>
+							</content>
+						</IconTabFilter>
+						<IconTabFilter id="ndITFComment" design="Vertical" text="PVC">
+							<content>
+								<core:Fragment fragmentName="testnamespace.view.excelGrid1" type="XML"/>
+							</content>
+						</IconTabFilter>
+						<IconTabFilter id="zDetailMki" design="Vertical" text="FTE">
+							<content>
+									<core:Fragment fragmentName="testnamespace.view.excelGrid2" type="XML"/>
+							</content>
+						</IconTabFilter>
+					</items>
+				</IconTabBar>
+				<!--<Panel expandable="true" expanded="true" headerText="PVC" width="auto">-->
+				<!--	<content>-->
+				<!--		<core:Fragment fragmentName="testnamespace.view.excelGrid1" type="XML"/>-->
+				<!--	</content>-->
+				<!--</Panel>-->
+				<!--<Panel expandable="true" expanded="true" headerText="FTE" width="auto">-->
+				<!--	<content>-->
+				<!--	<core:Fragment fragmentName="testnamespace.view.excelGrid2" type="XML"/>					-->
+				<!--	</content>-->
+				<!--</Panel>-->
+				<!--<IconTabBar id="noteDetailIconBar" upperCase="false" expandable="false">-->
+				<!--	<items>-->
+				<!--		<IconTabFilter id="tab1" design="Horizontal" icon="sap-icon://activity-2">-->
+				<!--			<content>-->
+				<!--				<core:Fragment fragmentName="testnamespace.view.excelGrid1" type="XML"/>-->
+				<!--			</content>-->
+				<!--		</IconTabFilter>-->
+				<!--		<IconTabFilter id="zDetailMki" design="Horizontal" icon="sap-icon://activity-2">-->
+				<!--			<content>-->
+				<!--<core:Fragment fragmentName="testnamespace.view.excelGrid1" type="XML"/>-->
+				<!--			</content>-->
+				<!--		</IconTabFilter>-->
+				<!--	</items>-->
+				<!--</IconTabBar>-->
+			</content>
+			<footer>
+				<Bar>
+					<contentLeft>
+						<Button text="Save" type="Accept" press="handleActions" width="140px"/>
+						<Button enabled="false" width="20px"/>
+						<Button text="Cancel" type="Reject" press="handleActions" width="140px"/>
+						<Button enabled="false" width="20px"/>
+						<Button icon="sap-icon://vertical-grip" enabled="false"/>
+						<Button icon="sap-icon://home" press="onNavView1"/>
+						<Button enabled="false" width="20px"/>
+						<Button text="Benchmarking" press="handleActions"/>
+					</contentLeft>
+				</Bar>
+			</footer>
+		</Page>
+	</App>
+</mvc:View>
